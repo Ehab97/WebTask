@@ -32,32 +32,17 @@
              home.style.opacity = 1;
          }
          var changeColor = () => {
-                 for (let i = 0; i < li.length; i++) {
-                     li[i].onclick = function() {
-                         var c = 0;
-                         while (c < li.length) {
-                             li[c++].className = `nav-item`;
-                         }
-                         li[i].className = `nav-item active`;
-                     };
-                 }
-
+             for (let i = 0; i < li.length; i++) {
+                 li[i].onclick = function() {
+                     var c = 0;
+                     while (c < li.length) {
+                         li[c++].className = `nav-item`;
+                     }
+                     li[i].className = `nav-item active`;
+                 };
              }
-             //  var change = function(event) {
-             //      if (!event.target.classList.contains('nav-item')) return;
-             //      event.target.classList.add('active');
-             //      var links = document.querySelectorAll('.nav-item');
-             //      // Loop through each link
-             //      for (var i = 0; i < links.length; i++) {
 
-         //          // If the link is the one clicked, skip it
-         //          if (links[i] === event.target) continue;
-
-         //          // Remove the .active class
-         //          links[i].classList.remove('active');
-
-         //      }
-         //  }
+         }
          var changeColors = () => {
                  //  element = Array.from(element);
                  for (let i = 0; i < lis.length; i++) {

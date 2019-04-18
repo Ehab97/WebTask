@@ -17,7 +17,6 @@
 
 .slider img {
     height: 400px;
-    ;
 }
 
 .who {
@@ -221,5 +220,9 @@ footer .icons a:hover {
     .tabs ul li {
         width: 60px;
         margin-right: 10px;
+    }
+    .who .box {
+        width: 295px;
+        margin: 20px auto;
     }
 }

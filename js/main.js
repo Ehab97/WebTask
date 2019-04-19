@@ -1,6 +1,5 @@
  window.onload = () => {
          //variables
-         var body = document.querySelector('body');
          var projects = document.querySelector('#pro');
          var pro = document.querySelector('#projects');
          var home = document.querySelector('#home');
@@ -16,21 +15,7 @@
          var jsC = document.querySelectorAll('.js');
          var vueC = document.querySelectorAll('.vue');
          var phpC = document.querySelectorAll('.php');
-         //  var liClass = document.querySelectorAll('.tabs ul .li');
-         //  var liActive = document.querySelectorAll('.tabs .li .active');
          //functions
-         var show = () => {
-             home.style.height = 0;
-             home.style.opacity = 0;
-             pro.style.height = 'auto';
-             pro.style.opacity = 1;
-         }
-         var hide = () => {
-             pro.style.height = 0;
-             pro.style.opacity = 0;
-             home.style.height = 'auto';
-             home.style.opacity = 1;
-         }
          var changeColor = () => {
              for (let i = 0; i < li.length; i++) {
                  li[i].onclick = function() {
@@ -59,25 +44,52 @@
              //  changeColor();
          changeColors();
          changeColor();
-         projects.addEventListener('click', (e) => {
-             setTimeout(show(), 1000);
+         projects.addEventListener('click', () => {
              pro.style.display = "block";
-             //  e.target.classList += ' active';
-
+             home.style.display = "none";
          });
          one.onclick = (e) => {
-             setTimeout(hide(), 1000);
+
              pro.style.display = "none";
+             home.style.display = "block";
 
          };
          two.onclick = () => {
-             setTimeout(hide(), 1000);
+
              pro.style.display = "none";
+             home.style.display = "block";
          };
+         all.onclick = () => {
+             for (let i = 0; i < allCourses.length; ++i) {
+                 allCourses[i].parentNode.style.display = 'block';
+             }
 
+         };
+         js.onclick = () => {
+             for (let i = 0; i < allCourses.length; ++i) {
+                 allCourses[i].parentNode.style.display = 'none';
+             }
+             for (let i = 0; i < jsC.length; ++i) {
+                 jsC[i].parentNode.style.display = 'block';
+             }
 
-
-
+         };
+         vue.onclick = () => {
+             for (let i = 0; i < allCourses.length; ++i) {
+                 allCourses[i].parentNode.style.display = 'none';
+             }
+             for (let i = 0; i < vueC.length; ++i) {
+                 vueC[i].parentNode.style.display = 'block';
+             }
+         };
+         php.onclick = () => {
+             for (let i = 0; i < allCourses.length; ++i) {
+                 allCourses[i].parentNode.style.display = 'none';
+             }
+             for (let i = 0; i < phpC.length; ++i) {
+                 phpC[i].parentNode.style.display = 'block';
+             }
+         }
 
      }
      //toggle
@@ -94,4 +106,20 @@
          element1.style.display = 'inline';
          element2.style.display = 'none';
      }
+ }
+ var show = (x, y) => {
+     //  home.style.height = 0;
+     //  home.style.opacity = 0;
+     //  pro.style.height = 'auto';
+     //  pro.style.opacity = 1;
+     y.style.display = 'block';
+     x.style.display = 'none';
+ }
+ var hide = (x, y) => {
+     //  pro.style.height = 0;
+     //  pro.style.opacity = 0;
+     //  home.style.height = 'auto';
+     //  home.style.opacity = 1;
+     y.style.display = 'none';
+     x.style.display = 'block';
  }

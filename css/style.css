@@ -102,7 +102,7 @@
 }
 
 .tabs ul li {
-    transition: .7s ease-in-out;
+    transition: .5s ease-in-out;
     color: #17a2b8;
     cursor: pointer;
     height: 35px;
@@ -112,6 +112,19 @@
     background-color: transparent;
     float: left;
     margin-right: 20px;
+}
+
+.tabs ul li a {
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+.tabs ul li:focus a {
+    color: #Fff;
+}
+
+.col {
+    transition: .5s;
 }
 
 .course {
